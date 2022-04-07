@@ -1,0 +1,147 @@
+Git Fundamentals
+======================
+Linus Tovalds - creator Linux OS.
+VCS - Version Control System
+
+
+Types of VCS
+-----------------
+ Distributed VCS - Git, Mercurial
+ 
+ Centralized VCS - Subversion(SVN), TFS- Team Foundation Server 
+ Distributed
+ 
+ 
+ 
+- What is Git ? 
+Git is a distributed VCS(Version Control System.)
+created by Linus Tovalds .. who also is the creator Linux OS.
+
+How git works
+=================
+-git works both on terminal and with GUI.
+ 
+ Repository : This is where we ship the code.
+ ************************
+ A repo is the location in your system where your codes versions are stored.
+ We use git to create the repo.
+ We create a repo each for EVERY project
+ 
+ What is GitHub ?
+- is a hosted git service; where you can warehouse your projects and their repos.
+- other developers or business interest can download your project from github;
+which means github can server as a code clearing house.
+Other git hosted service
+- tfs
+- gitlab 
+- bitbucket 
+ 
+pynode@24
+
+
+Installing git 
+********************
+git-scm.com
+
+
+Git Configuration
+---------------------
+ - name 
+ - email 
+ - text-editor
+
+git config --global user.name 'nathaniel nosa'
+git config --global user.email proncode@gmail.com
+or
+git config --global --replace-all user.name 'folorunso joseph'
+
+
+Creating a git repository for a project
+-----------------------------
+- this initializing git for a given project.
+step
+1. cd into the folder project 
+2. then run : git init 
+
+checking the repo status
+-------------------------
+- git status -  shows the current working directory status
+  git add (staging) - to prepare the working directory for versioning/commiting.
+  git commit- to make the commit or create the version.
+  git log - shows your commit history.
+Staging and Commiting Changes
+------------------------------
+
+Saving state
+************
+steps 
+1. stage the changes : git add . [the dot means stage all files]
+2. commit the changes: git commit -m "commit message"
+
+Commiting
+***********
+NB: You can only commit/save staged changes
+run: git commit -m "initial commit .. "
+
+
+Check all your commits 
+------------------
+- git log
+- git log --oneline
+
+.gitignore 
+**********
+This is a special file that tells git what should not be saved/tracked.
+ 
+
+
+Undoing things
+==================
+There are 3 main ways to do things: 
+
+ 1. checkout ... detached HEAD mode
+ 2. revert 
+ 3. reset
+ 
+ - checkout: This is the safest of the 3 methods for going back in time in git.
+ This is sort of used to review what has been done before. And when done with the revewing, 
+  you git checkout master .. to return back to the current state of the repo.
+  
+	git checkout <commitID>
+ 
+ If you decide to make commits while in the detached HEAD mode, you can more those 
+ commits as much as you want. But when done, make you create a new branch by running:
+   
+     git checkout -b <branchName>
+	 
+  After these, you can then checkout the master branch.
+
+ - revert: git revert <commitID> .. this is used cancel/delete a commit. It doesn't actually delete it though, but is used to remove 'the effect' of a commit by replacing it with a new commit.
+ 
+   git revert <commitID>
+ 
+ The stage and commit the new change. 
+ - reset : this is dangerous one. It deletes the previous commits to the one you chose.
+ git reset <commitID> --hard
+
+
+Branching 
+=============
+This is probably one of the most loved features of git. 
+This allows to test different ideas in your projects.
+
+steps--
+1. while on master, create a new branch with: git branch <branchName>
+2. you can switch back to master branch, and lose all branchName works.
+To move to the new branch, run: git checkout <branchName>. And vice versa.
+3. To merge with the master, ensure you are currently on the master branch, then run:
+	> git merge <branchName>
+
+Online Repos 
+""""""""""""""
+-Github : Microsoft 
+-GitLab: Anonymous
+-Bitbucket: Atlassian
+
+git clone https://github.com/folorunjay/class_blogengine.git
+

@@ -1,0 +1,147 @@
+Source Code Management with VCS(Version Control System)
+===============================
+ VCS - Version Control System
+ used creating multiple versions of a file, usually a text: .html,.php,.py,.txt 
+
+- What is Source Code Management
+- What is VCS - Version Control System.
+
+Source Code Management is all about using VCS(Version Control System) to manage 
+different versions of your code.
+
+It gives you power to go back and forth revisitng the earlier version of your code.
+
+pynode@24
+
+- Examples of VCS: 
+------------------------
+ - git - open source https://www.git-scm.com/
+ - Subversion (SVN) : open https://subversion.apache.org/
+ - Mercurial : open propietary (community & paid version) https://www.mercurial-scm.org/
+ - tsf(Team Foundation Server) https://azure.microsoft.com/en-us/services/devops/server/
+ 
+ classification of vcs:
+ 1. Centrallize VCS : Has a central location as the master server. This is where the complete project is located. Ex. SVN,tfs
+ 2. Distributed VCS: Treats all servers as masters: git(linus tovalds), mercurial
+
+Installing git
+--------------
+ www.git-scm.com 
+
+
+Working with the terminal/cli 
+-----------------------
+What is terminal ?
+terminal is a commandline interface(CLI) used to work on computers generally.
+it is an alternative to using the GUI(Graphic User Interface) when working on the system.
+
+- Work with files/folder : create files,create folders and delete them,copy/move files
+- Nagivate around folders
+ 
+ Another name for folder is Directory
+
+Working on the terminal (with focus of bash)
+-------------------------
+ - navigate : cd - Change Directory. Moving from location to location.
+ 
+ - create files and folders 
+ - copy cp and cut mv files 
+ - delete files/folders rm
+
+
+Nagivating directories. cd(Change Directory)
+-----------------------
+cd <dot dot> : move a directory upwards 
+cd <directoryName> : move into the directory
+cd <space> : moves to the home directory 
+cd folder1/folder2/folder3
+
+
+creating folders/directories  myprojects
+----------------
+- mkdir <folderName> #creates a single folder
+- mkdir folderName1 folderName2  etc #creates multiple folders
+
+Listing the files and folders 
+---------------------------
+ls : lists all files and folders at the location, without the hidden ones.
+ls -l : lists them vertically
+ls -a : show hidden files and folders 
+ls -al : shows hidden and lists vertically
+
+
+creating files
+-------------
+touch <fileName>
+touch {file1,fil2}.txt
+
+writing into the file with nano 
+-----------------------------
+nano filename.txt 
+to save
+**********
+1a. ctrl + x .. this command attempts to EXIT the file. If unsaved, nano will prompt 
+to save
+b. Enter 'y' and press enter 
+
+2. Press esc key and enter :oq 
+
+cat to read a file
+------------------
+-we can use the cat command to read a file.
+cat <fileName>
+
+
+deleting files and folders 
+-----------------
+rm -r <folderName>  .. deletes a folder with all its files 
+rm fileName 
+
+copying files 
+-----------------
+cp filename destinationPath
+cp file1.txt jeremy
+
+
+
+
+Git -- fundamentals
+=====================
+git configuration
+--------------
+git config --global user.name 'Nathaniel Nosa'
+git config --global user.email 'proncode@gmail.com'
+
+
+creating a git repository
+------------------------
+ - git init : initializes a local repo 
+ - git status : checks status of the working tree 
+ 
+ Two steps to commit 
+ -------------
+ - git add . : adds file to index(staging)
+ - git commit :  Adds changes to the current tree 
+ 
+ 
+ignoring files
+-------------------
+-in git sometimes we dont some file to be committed into our repo.
+-for instance, log files that track operational errors in our apps.
+
+ steps
+1. create a .gitignore file within project folder 
+2. add the files and folder you want to ignore 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ remote commands 
+ -------------------
+ - git push : uploads local repo to the remote repo 
+ - git pull : pulls the latest commit from a remote repo 
+ - git clone : copies and downloads a remote repo 
+ 
